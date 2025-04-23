@@ -332,12 +332,10 @@ const checkEnrollment = async (req, res) => {
 
 const checkCourseEnrollment = async (req, res) => {
     try {
-        const { user_id, course_id } = req.query;
-        
-        const enrollment = await Enrollment.findOne({
+        const {id} = req.params;
+        const enrollment = await Enrollment.findAll({
             where: {
-                user_id,
-                course_id,
+                user_id : id,
                 status: 'active'
             }
         });

@@ -102,6 +102,9 @@ app.use('/api', templetesRoutes);
 const certificationsRoute = require('./routes/certificationsRoute');
 app.use('/api', certificationsRoute);
 
+//Subscription Route
+const subscriptionRoutes = require('./routes/subscriptionRoutes');
+app.use('/api', subscriptionRoutes);
 
 //Enrollment Route
 const enrollmentRoutes = require('./routes/enrollmentRoutes');

@@ -8,7 +8,7 @@ router.post('/enrollment/add', enrollmentController.addEnrollment);
 // Check if user is enrolled in a template (specific route first)
 router.get('/enrollment/check', enrollmentController.checkEnrollment);
 
-router.get('/enrollment/course/check', enrollmentController.checkCourseEnrollment);
+router.get('/enrollment/course/check/:id', enrollmentController.checkCourseEnrollment);
 
 // Get all enrollments
 router.get('/enrollment/all', enrollmentController.getEnrollments);
